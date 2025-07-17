@@ -10,7 +10,14 @@ AMyPawn::AMyPawn()
 	PrimaryActorTick.bCanEverTick = true;
 
 	//Create components
+	CameraMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CameraMesh"));
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
+
+	//Setup Camera
+	Camera->FieldOfView = 120.0f;
+	Camera->SetupAttachment(CameraMesh);
+	Camera->SetRelativeLocation(FVector(-100.0f, 0, 50.0f));
+
 
 }
 

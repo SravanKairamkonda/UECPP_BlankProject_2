@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "Camera/CameraComponent.h"
+#include "Components/StaticMeshComponent.h"
 #include "MyPawn.generated.h"
 
 UCLASS()
@@ -25,6 +26,9 @@ protected:
 	//Main pawn camera
 	UPROPERTY(EditAnyWhere);
 	UCameraComponent* Camera;
+
+	UPROPERTY(EditAnyWhere);
+	UStaticMeshComponent* CameraMesh;
 
 public:	
 	// Called every frame
