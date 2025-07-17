@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+#include "Camera/CameraComponent.h"
 #include "MyPawn.generated.h"
 
 UCLASS()
@@ -15,9 +16,14 @@ public:
 	// Sets default values for this pawn's properties
 	AMyPawn();
 
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+
+	//Main pawn camera
+	UCameraComponent* Camera;
 
 public:	
 	// Called every frame
