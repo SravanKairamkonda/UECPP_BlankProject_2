@@ -3,3 +3,8 @@
 
 #include "MyGameModeBase.h"
 
+AMyGameModeBase::AMyGameModeBase()
+{
+	DefaultPawnClass = AMyPawn::StaticClass();
+}
+

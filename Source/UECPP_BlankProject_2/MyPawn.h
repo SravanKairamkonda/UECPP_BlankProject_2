@@ -23,6 +23,7 @@ protected:
 
 
 	//Main pawn camera
+	UPROPERTY(EditAnyWhere);
 	UCameraComponent* Camera;
 
 public:	

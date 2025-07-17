@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "MyPawn.h"
 #include "MyGameModeBase.generated.h"
 
 /**
@@ -13,5 +14,7 @@ UCLASS()
 class UECPP_BLANKPROJECT_2_API AMyGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+
+public:
+	AMyGameModeBase();
 };
