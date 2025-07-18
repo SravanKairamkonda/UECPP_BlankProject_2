@@ -17,7 +17,13 @@ AMyPawn::AMyPawn()
 	Camera->FieldOfView = 120.0f;
 	Camera->SetupAttachment(CameraMesh);
 	Camera->SetRelativeLocation(FVector(-120.0f, 0, 150.0f));
+}
 
+void AMyPawn::MoveLR(float movementDelta)
+{
+	FVector newLocation = GetActorLocation();
+	newLocation.Y += movementDelta*movementSpeed;
+	SetActorLocation(newLocation);
 
 }
 
@@ -39,6 +45,9 @@ void AMyPawn::Tick(float DeltaTime)
 void AMyPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+	//Register L R movement
+	PlayerInputComponent->BindAxis(TEXT("MoveLR"),this,&AMyPawn::MoveLR);
 
 }
 

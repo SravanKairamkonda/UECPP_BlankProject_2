@@ -17,6 +17,8 @@ public:
 	// Sets default values for this pawn's properties
 	AMyPawn();
 
+	//Delta movement
+	void MoveLR(float movementDelta);
 
 protected:
 	// Called when the game starts or when spawned
@@ -29,6 +31,11 @@ protected:
 
 	UPROPERTY(EditAnyWhere);
 	UStaticMeshComponent* CameraMesh;
+
+	//Movement speed
+	UPROPERTY(EditAnyWhere, Category = "Pawn Settings");
+	float movementSpeed = 1.0f;
+
 
 public:	
 	// Called every frame
