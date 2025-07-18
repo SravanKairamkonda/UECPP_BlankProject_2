@@ -16,7 +16,7 @@ AMyPawn::AMyPawn()
 	//Setup Camera
 	Camera->FieldOfView = 120.0f;
 	Camera->SetupAttachment(CameraMesh);
-	Camera->SetRelativeLocation(FVector(-100.0f, 0, 50.0f));
+	Camera->SetRelativeLocation(FVector(-120.0f, 0, 150.0f));
 
 
 }
